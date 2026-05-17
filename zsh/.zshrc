@@ -109,7 +109,19 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
-alias opencase="ssh chis@100.97.41.40 './reset_open_case.sh'"
+alias opencase="/home/chis/scripts/open_case.sh"
+alias bios="systemctl reboot --firmware-setup"
+alias update="sudo pacman -Syu && yay -Syu && flatpak update"
+alias start="sudo /opt/lampp/lampp start"
+alias stop="sudo /opt/lampp/lampp stop"
+alias status="sudo /opt/lampp/lampp status"
+alias win='sudo grub-reboot "$(sudo grep -i "windows" /boot/grub/grub.cfg | cut -d"'"'"'" -f2 | head -n 1)" && reboot'
+
+function ask() {
+    #echo "Asking AI..."
+    #ollama run llama3.1 "$*" | tee /dev/tty | wl-copy
+    ollama run llama3.1 "$*" | wl-copy
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
