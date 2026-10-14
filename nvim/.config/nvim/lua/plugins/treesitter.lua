@@ -11,6 +11,7 @@ return {
             "cpp",
             "javascript",
             "typescript",
+            "java",
             "python",
             "json",
             "bash",

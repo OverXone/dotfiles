@@ -32,7 +32,13 @@ return {
             "ts_ls",
             "jsonls",
             "html",
+            "jdtls",
         }
+
+        -- jdtls needs java 21+, system default is 17
+        vim.lsp.config("jdtls", {
+            cmd_env = { JAVA_HOME = "/usr/lib/jvm/java-25-openjdk" },
+        })
 
         vim.lsp.enable(enabled)
 

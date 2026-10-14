@@ -24,6 +24,7 @@ vim.opt.relativenumber = true -- show relative numbers
 vim.opt.fillchars = { eob = " " } -- removes ~ after line numbers
 vim.opt.wrap = true -- text wraps when it reaches the end of the screen
 vim.opt.guicursor = "" -- sets the cursor to a block
+vim.opt.termguicolors = true -- 24-bit colors (needed by colorizer)
 
 vim.opt.clipboard = "" -- separates the system clipboard and nvim's keyboard
 
